@@ -17,7 +17,7 @@ INSERT INTO newsletter ( email, first_name, last_name) VALUES (:email, :first_na
     echo 'Entry created';
 }
 catch (PDOException $e) {
-    echo '<p> Something went wrong.</p>';
+    echo $e;
     echo '<br>';
     echo '<a href="https://mozaic.azurewebsites.net/"> Back to homepage </a>';
     exit();
