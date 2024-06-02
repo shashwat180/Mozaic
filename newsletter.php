@@ -3,16 +3,7 @@
 
 try{
     $db= new PDO("sqlsrv:server = tcp:mozaic-server.database.windows.net,1433; Database = mozaic-db", "CloudSAfe98238b", "hellomozaic@1");
-    echo 'Hi';
-}
-catch (PDOException $e) {
-    echo '<p> Something went wrong.</p>';
-    echo '<br>';
-    echo '<a href="https://mozaic.azurewebsites.net/"> Back to homepage </a>';
-    exit();
-}
-
-$customer = [
+    $customer = [
 'first_name' => isset($_POST['firstname']) ? $_POST['firstname'] : NULL,
 'last_name' => isset($_POST['lastname']) ? $_POST['lastname'] : NULL,
 'email' => isset($_POST['email']) ? $_POST['email'] : NULL,
@@ -22,6 +13,17 @@ $customer = [
 $db->prepare("
 INSERT INTO newsletter ( email, first_name, last_name) VALUES (:email, :first_name, :last_name)
 ")->execute($customer);
+
+    echo 'Entry created';
+}
+catch (PDOException $e) {
+    echo '<p> Something went wrong.</p>';
+    echo '<br>';
+    echo '<a href="https://mozaic.azurewebsites.net/"> Back to homepage </a>';
+    exit();
+}
+
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
