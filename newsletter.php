@@ -2,7 +2,7 @@
 
 
 try{
-    $db= new PDO('mysql:host=127.0.0.1; dbname=mozaic_newsletter', 'root', '');
+    $db= new PDO("sqlsrv:server = tcp:mozaic-server.database.windows.net,1433; Database = mozaic-db", "CloudSAfe98238b", 'root', '');
 }
 catch (PDOException $e) {
     echo '<p> Something went wrong.</p>';
