@@ -8,7 +8,7 @@ try{
 catch (PDOException $e) {
     echo '<p> Something went wrong.</p>';
     echo '<br>';
-    echo '<a href="http://localhost/Projects/startbootstrap-coming-soon-gh-pages/"> Back to homepage </a>';
+    echo '<a href="https://mozaic.azurewebsites.net/"> Back to homepage </a>';
     exit();
 }
 
@@ -56,5 +56,5 @@ else
 {
     echo "Not sent";
 }*/
-header("Location: http://localhost/Projects/startbootstrap-coming-soon-gh-pages/");
+header("Location: https://mozaic.azurewebsites.net/");
 exit();
