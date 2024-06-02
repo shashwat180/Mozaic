@@ -4,9 +4,10 @@
 try{
     $db= new PDO("sqlsrv:server = tcp:mozaic-server.database.windows.net,1433; Database = mozaic-db", "CloudSAfe98238b", "hellomozaic@1");
     $customer = [
+'email' => isset($_POST['email']) ? $_POST['email'] : NULL,
 'first_name' => isset($_POST['firstname']) ? $_POST['firstname'] : NULL,
 'last_name' => isset($_POST['lastname']) ? $_POST['lastname'] : NULL,
-'email' => isset($_POST['email']) ? $_POST['email'] : NULL,
+
 ];
 
 
