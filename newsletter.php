@@ -11,7 +11,7 @@ try{
 
 
 $db->prepare("
-INSERT INTO newsletter ( email, first_name, last_name) VALUES (:email, :first_name, :last_name)
+INSERT INTO dbo.newsletter ( email, first_name, last_name) VALUES (:email, :first_name, :last_name)
 ")->execute($customer);
 
     echo 'Entry created';
