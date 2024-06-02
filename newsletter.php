@@ -2,7 +2,7 @@
 
 
 try{
-    $db= new PDO("sqlsrv:server = tcp:mozaic-server.database.windows.net,1433; Database = mozaic-db", "shashwat18702@gmail.com", "Shashwat-Microsoft");
+    $db= new PDO("sqlsrv:server = tcp:mozaic-server.database.windows.net,1433; Database = mozaic-db", "CloudSAfe98238b", "hellomozaic@1");
     echo 'Hi';
 }
 catch (PDOException $e) {
