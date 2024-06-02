@@ -56,5 +56,5 @@ else
 {
     echo "Not sent";
 }*/
-header("Location: https://mozaic.azurewebsites.net/");
+header("Location: http://localhost/Projects/startbootstrap-coming-soon-gh-pages/");
 exit();
