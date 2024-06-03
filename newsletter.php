@@ -66,5 +66,5 @@ else
     echo "Not sent";
 }*/
 $message = "You are subscribed to Mozaic! Check your email for a welcome message.";
-echo "<script type='text/javascript'>alert('$message'); window.location.href = 'http://localhost/your_homepage';</script>";
+echo "<script type='text/javascript'>alert('$message'); window.location.href = 'https://mozaic.azurewebsites.net/';</script>";
 exit();
