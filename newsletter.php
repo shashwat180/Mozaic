@@ -16,6 +16,7 @@ INSERT INTO dbo.newsletter ( email, first_name, last_name) VALUES (:email, :firs
 
 $message = "Thank you for subscribing to our newsletter!";
 echo "<script type='text/javascript'>alert('$message');</script>";
+header("Location: https://mozaic.azurewebsites.net/");
 }
 catch (PDOException $e) {
     echo $e;
@@ -66,5 +67,5 @@ else
 {
     echo "Not sent";
 }*/
-header("Location: https://mozaic.azurewebsites.net/");
+
 exit();
