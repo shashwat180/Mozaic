@@ -14,8 +14,6 @@ try{
 $db->prepare("
 INSERT INTO dbo.newsletter ( email, first_name, last_name) VALUES (:email, :first_name, :last_name)
 ")->execute($customer);
-
-    echo 'Entry created';
 }
 catch (PDOException $e) {
     echo $e;
