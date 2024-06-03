@@ -65,7 +65,6 @@ else
 {
     echo "Not sent";
 }*/
-header("Location: https://mozaic.azurewebsites.net/");
-$message = "Thank you for subscribing to our newsletter!";
-echo "<script type='text/javascript'>alert('$message');</script>";
+$message = "You are subscribed to Mozaic! Check your email for a welcome message.";
+echo "<script type='text/javascript'>alert('$message'); window.location.href = 'http://localhost/your_homepage';</script>";
 exit();
